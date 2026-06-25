@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Holiday Album - Frosty Volcano Summit</title>
+  <link href="/assets/main.css" rel="stylesheet" type="text/css">
+  <link href="/assets/eggs.css" rel="stylesheet" type="text/css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGBMJBFWQF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EGBMJBFWQF');
+  </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" type="application/manifest+json" href="./site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta id="meta-title" property="og:title" content="Frosty Volcano Summit">
+  <meta id="meta-desc" property="og:description"
+    content="This is a download page for Ethan's selective personal photos taken on holidays. You ['the User'] are entitled to download any of the following compressed files ['zips'] for your own private usage, or strictly personal usage including profile pictures.">
+  <meta id="meta-image" name="og:image" itemprop="image" content="https://reper2.github.io/switch-album/logo.png">
+  <meta property="og:site_name" content="Frosty Volcano Summit | reper2.github.io">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#14d8ee">
+  <script src="/app/lib/jquery-4.0.0.min.js" defer></script>
+  <script>
+    // Block rendering for a millisecond to pull the theme before the DOM draws
+    if (localStorage.getItem("site-theme") === "alt") {
+      const link = document.createElement("link");
+      link.id = "theme-link";
+      link.rel = "stylesheet";
+      link.href = "/assets/alt-theme.css";
+      document.head.appendChild(link);
+    } else if (!localStorage.getItem("site-theme")) {
+      localStorage.setItem("site-theme", "alt");
+    }
+  </script>
+</head>
+
+<body id="_bg" data-bg-force="holidays">
+  <div class="egg" data-egg="hAlbum_aboveHeader"></div>
+  <header>Holiday Album</header>
+  <main>
+    <div id="grassBox">
+      <h2>Legal Licensing</h2>
+      <span>You ["the User"] are entitled to download any of the following compressed files ["zips"] for your own
+        private usage, or strictly personal usage including profile pictures.</span>
+      <br><a id="downloadLink" class="dLink">Download</a>
+      <div class="egg" data-egg="hAlbum_link"></div>
+      <a rel="noopener noreferrer" id="learnmore" target="_blank" href="https://github.com/Reper2/holiday-album"
+        title="Location: Reper2/holiday-album - GitHub (https://github.com/Reper2/holiday-album)">See the full database</a>
+      <br><br>
+      <span id="eggCounter"></span>
+    </div>
+
+    <form id="optForm"></form>
+    <div class="egg" data-egg="hAlbum_underForm"></div>
+    <div class="flex">
+      <div id="audctrls"></div>
+      <div id="eggMenu"></div>
+      <div id="copy"></div>
+      <div id="install"></div>
+    </div>
+    <div class="egg" data-egg="hAlbum_underBtns"></div>
+    <audio id="music"></audio>
+  </main>
+  <footer id="footer" class="bottom"></footer>
+</body>
+<script type="module" src="/app/dist/index.js"></script>
+<script type="module" src="/app/dist/external/photos-zipper.js"></script>
+
+</html>
